@@ -30,6 +30,9 @@ void draw () {
   ellipse(268,65,30,30);
   fill (#F3BE72);
   ellipse(268,65,10,10);
+  fill(#E76262);
+  ellipse (300,160,20,10);
+  fill (#F3BE72);
   noStroke();
  
 }
