@@ -2,7 +2,10 @@ void setup () {
   size(400,400); 
 }
 void draw () {
-  
+  fill (#E76262);
+  triangle (275,150,160,200,250,100);
+  ellipse (262,150,25,25);
+  fill (#F3BE72);
   triangle (290,150,300,75,250,100);
   rect(132, 160, 10, 140);
   quad(208,300,215,300,212,310,205,310);
@@ -31,7 +34,7 @@ void draw () {
   fill (#F3BE72);
   ellipse(268,65,10,10);
   fill(#E76262);
-  ellipse (300,160,20,10);
+  ellipse (270,125,20,10);
   fill (#F3BE72);
   noStroke();
  
