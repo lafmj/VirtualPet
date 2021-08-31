@@ -5,7 +5,7 @@ Arduino arduino;
 
 void setup () {
   size(400,400); 
-   arduino = new Arduino(this, Arduino.list()[0], 57600);
+  arduino = new Arduino(this, Arduino.list()[0], 57600);
 }
 void draw () {
   int y = arduino.analogRead(5);
@@ -22,6 +22,11 @@ void draw () {
   quad(135,300,130,300,125,310,130,310);
   rect(134,300,4,10);
   quad(138,300,143,300,146,310,140,310);
+  //rotate?\
+  int x = 0;
+ if (y <= 30) 
+  x =  1*y  ;
+  rotate (x);
   rotate(-0.30);
   fill (#F3BE72+y*2);
   ellipse(110,150,60,170);
@@ -34,6 +39,8 @@ void draw () {
   fill (#E7A062+y*2);
   ellipse(125,100,170,60);
   rotate(-0.18);
+  rotate (-x);
+  //rotate
   fill (#AB8C85);
   ellipse(175,190,200,200);
   ellipse (250,75,100,100);
@@ -43,7 +50,7 @@ void draw () {
   ellipse(268,65,10,10);
   fill(#E76262);
   ellipse (270,125,20,10);
-  if (y <= 0) {
+  if (y <= 30) {
   fill (#AB8C85);
   ellipse(268,65,30,30);
   }
