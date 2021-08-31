@@ -1,7 +1,14 @@
+import processing.serial.*;
+import cc.arduino.*;
+Arduino arduino;
+
+
 void setup () {
   size(400,400); 
+   arduino = new Arduino(this, Arduino.list()[0], 57600);
 }
 void draw () {
+  int y = arduino.analogRead(5);
   fill (#E76262);
   triangle (275,150,160,200,250,100);
   ellipse (262,150,25,25);
@@ -16,14 +23,15 @@ void draw () {
   rect(134,300,4,10);
   quad(138,300,143,300,146,310,140,310);
   rotate(-0.30);
+  fill (#F3BE72+y*2);
   ellipse(110,150,60,170);
   rotate(0.30);
   rotate(0.18);
-  fill(#C09078);
+  fill(#C09078+y*2);
   ellipse(120,200,170,60);
-  fill (#DF8A5F);
+  fill (#DF8A5F+y*2);
   ellipse(115,150,170,60);
-  fill (#E7A062);
+  fill (#E7A062+y*2);
   ellipse(125,100,170,60);
   rotate(-0.18);
   fill (#AB8C85);
@@ -35,7 +43,10 @@ void draw () {
   ellipse(268,65,10,10);
   fill(#E76262);
   ellipse (270,125,20,10);
-  fill (#F3BE72);
+  if (y <= 0) {
+  fill (#AB8C85);
+  ellipse(268,65,30,30);
+  }
   noStroke();
- 
+  
 }
