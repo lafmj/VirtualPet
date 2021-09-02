@@ -1,0 +1,20 @@
+import processing.serial.*;
+import cc.arduino.*;
+Arduino arduino;
+
+public void setup() {
+  size(500, 500);
+  arduino = new Arduino(this, Arduino.list()[0], 57600); //change the [0] to a [1] or [2] etc. if your program doesn't work
+}
+
+public void draw() {
+  background(192);
+  int y = arduino.analogRead(0);
+  System.out.println(y);
+  fill (#ffffff);
+  rect(0,0,500,500);
+  fill(#CCCCCC);
+  ellipse(250,400,125,125);
+  rect(200,100,200,30);
+  noStroke();
+}
