@@ -11,10 +11,15 @@ public void draw() {
   background(192);
   int y = arduino.analogRead(0);
   System.out.println(y);
-  fill (#ffffff);
-  rect(0,0,500,500);
-  fill(#CCCCCC);
+  fill(#CC3333);
   ellipse(250,400,125,125);
-  rect(200,100,200,30);
+  rect(217,100,70,300);
+  fill (#CCCCCC);
+  rect(0,0,500,500);
+  fill(#FFFFFF);
+  ellipse(250,400,125,125);
+  rect(217,100,70,300);
+  }
+
   noStroke();
-}
+  
