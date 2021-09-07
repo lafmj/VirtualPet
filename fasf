@@ -16,10 +16,14 @@ public void draw() {
   rect(217,100,70,300);
   fill (#CCCCCC);
   rect(0,0,500,500);
+  if (y>555)
+  fill(#CA0000);
+  else
   fill(#FFFFFF);
   ellipse(250,400,125,125);
   rect(217,100,70,300);
+  noStroke();
+  
   }
 
-  noStroke();
   
